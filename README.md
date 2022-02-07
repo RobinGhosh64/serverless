@@ -213,7 +213,7 @@ Navigate to the Resource Group created previously, select the **Our Storage Acco
 - Endpoint: **select endpoint** (navigate and select the desired FunctionApp and select the default **Function Name**  
 - **Create**, a Function will **automatically** be created to process the **Event Grid** trigger
 
-<img src="media/finish_up_wiring.png"> 
+<img src="media/finish-up-wiring.png"> 
 
 Navigate to the Resource Group created previously, select the **Function App** -> **Functions** -> Select the **Function Name** -> **Code and + Test**: . 
 
