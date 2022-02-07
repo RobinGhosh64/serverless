@@ -315,7 +315,7 @@ The next step in the application architecture is to read documents representing 
 
 - Adding an **Input Binding** to the **HttpTrigger1**
 - Updating the  **HttpTrigger1** function to read all items from the collection in the Cosmos DB 
-- ````shell
+````shell
 
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
@@ -339,7 +339,7 @@ Navigate to the **EventGridTrigger1**, select **Integration** and **Add output**
 - Cosmos DB account connection: **select Cosmos DB account created earlier**  
 
 
-<img src="media/create-input-binding.png"> 
+<img src="media/create_input_binding.png"> 
 
 ## 
 
