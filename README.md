@@ -233,7 +233,7 @@ Open a second browser session in the Azure Portal:
 
 -  **EventGridTrigger1**, observe for each image, Event Grid will trigger the Fuction, **Logs** will reflect the Event Grid trigger content: 
 
-<img src="media/function.app.eventgrid.trigger.png"> 
+<img src="media/output-binding-log.png"> 
 
 
 ## Step 7: Azure Cosmos DB Output Binding
