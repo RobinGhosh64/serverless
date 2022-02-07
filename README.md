@@ -333,7 +333,7 @@ The next step is repeat of [Step 6](#step-6-event-grid-blob-storage-test) with a
 - Run the Test/Run option and use GET instead of POST. Make sure you r seeing 200 Success
 - Verify the **HttpTrigger1** triggers successfully via the **Logs** 
 
-<img src="media/finish-test-2.png"> 
+<img src="media/finish-test-1.png"> 
 
 The previous example demonstrates the relationship and services to connect Azure Event Grid to Azure Functions and then persist data in Azure Cosmos DB for an example of an event-driven architecture using **Azure Serverless offerings** 
 
