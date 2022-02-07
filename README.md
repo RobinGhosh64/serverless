@@ -161,15 +161,16 @@ Then select on Create Storage Account
 
 Fill all the parameters as shown
 
-- Function App Name: **devday-mfa**
-- Publish: **Code** 
-- Runtime Stack: **NodeJS** 
+- Storage Account Name: **devdayfebmystorage**
+- Region : **East US**
+- Performamcnce: **Standard** 
+- Redundancy: **Geo redundancy** 
 - Create
 
 <img src="media/devday-select-create-storage-account.png">
 
 
-## Step 5: Create Event Grid 
+## Step 5: Ask Azure to wire up this Blob Storage to emit Events when a new blob is added to the container
 
 In this step, a Storage Account will be created, and then an Event Grid System Topic to the previously created Function App 
 - Create a Storage Account
