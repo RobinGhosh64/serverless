@@ -91,6 +91,26 @@ Navigate to the Resource Group created previously, select the Function App, and 
 
 <img src="media/devday-create-function-app-1.png">
 
+## Step 4A: Add Function(Method) for your HttpTrigger 
+Select your Function App, and create a new Function
+
+- Function App Name: **devday-mfa**
+- Develope in Portal: **Code** 
+- Filter : **Http** 
+- Create
+
+<img src="media/devday-create-af-create-http.png">
+
+## Step 4B: Add Function(Method 2) for your EventGrid
+Navigate to the Resource Group created previously, select the Function App, and create a new Function App
+
+- Function App Name: **devday-mfa**
+- Develope in Portal: **Code** 
+- Filter : **EventGrid** 
+- Create
+
+<img src="media/devday-create-af-create-event.png">
+
 
 ### Step 4A: Create Storage Account and Function App
 
