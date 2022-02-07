@@ -170,7 +170,7 @@ Fill all the parameters as shown
 <img src="media/devday-select-create-storage-account.png">
 
 
-## Step 5: Ask Azure to wire up this Blob Storage Account to emit Events when a new blob is added to any container in this storage account
+## Step 5: Ask Azure to wire up this Blob Storage Account to emit Events when a new blob is added to this container
 
 In this step, a Storage Account will be created, and then an Event Grid System Topic to the previously created Function App 
 - Create a Storage Account
@@ -205,13 +205,13 @@ Navigate to the Resource Group created previously, select the **Our Storage Acco
 
 - Configure and verify the **Topic Type** and **Source Resource** match the **stgevent....** resource created previously 
 - Select:  **Event Subscription** 
-- Name: **BlobEventGridToFunctionApp** 
+- Name: **devdayfebmystorage** 
 - Event Schema: **Event Grid Schema** 
-- System Topic Name: **BlobEventGridToFunctionAppTopic**
+- System Topic Name: **devday-my-topic**
 - Event Types Filter: **default 2 selected, or as desired** 
 - Endpoint Type: **Azure Function** 
 - Endpoint: **select endpoint** (navigate and select the desired FunctionApp and select the default **Function Name**  
-- **Create**, a Function will **automatically** be created to process the **Event Grid** trigger
+- **EventGridTrigger1**, a Function will **automatically** be created to process the **Event Grid** trigger
 
 <img src="media/finish-up-wiring.png"> 
 
