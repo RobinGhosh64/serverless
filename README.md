@@ -82,7 +82,7 @@ az cosmosdb create --name $COSMOSDB_ACCOUNT_NAME --resource-group $RESOURCE_GROU
  
  
 ## Step 4: Create Function App  
-<img src="media/Function-Apps.svg" width=75 height=75px>
+<img src="media/devday-create-function-app-1.png" width=75 height=75px>
 
 
 ### Step 4A: Create Storage Account and Function App
