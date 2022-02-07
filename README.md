@@ -189,7 +189,7 @@ Important steps to follow, please pay attention.
 ##
 ### Step 5.b: Ask Azure to create a Event Subscriber(consumer) to trap events , push to EventGrid Topic and then call an Azure Function for post processing 
 
-Navigate to the Resource Group created previously, select the **devdaymystorage**, **Events** <img src="media/rg.events.select.png" > icon and **Create** an **Event Subscription**, link it to the Function App. 
+Navigate to the Resource Group created previously, select the **devdaymystorage**, **Events** <img src="media/rg.events.select.png" > icon and **Create** an **Event Subscription**, link it to the Azure Function. 
 
 <img src="media/devday-create-azure-event-subscriber.png">
 
@@ -205,22 +205,10 @@ Navigate to the Resource Group created previously, select the **devdaymystorage*
 
 <img src="media/finish-up-wiring.png"> 
 
-Navigate to the Resource Group created previously, select the **Function App** -> **Functions** -> Select the **Function Name** -> **Code and + Test**: . 
-
-- Verify **{EventGridTriggerFunction}\run.csx** contains the following properties: 
-
-````shell
-#r "Microsoft.Azure.EventGrid"
-using Microsoft.Azure.EventGrid.Models;
-
-public static void Run(EventGridEvent eventGridEvent, ILogger log)
-{
-    log.LogInformation(eventGridEvent.Data.ToString());
-}
-````
 
 
-## Step 6: Event Grid Blob Storage Test
+
+## Step 6: Event Grid Blob Storage Light Test
 
 Current status is the following have been created and ready for testing: 
 
@@ -238,12 +226,12 @@ Next step is to create an blob container, upload files and verify the Event Grid
 
 Open a second browser session in the Azure Portal:
 - Session 1: Navigate to the newly created **Blob container1**
-- Session 2: Navigate to the Function App, **EventGridTriggerFunction**, and open the **Logs** menu, to view the Function logs 
+- Session 2: Navigate to the Function App, **EventGridTrigger1**, and open the **Logs** menu, to view the Function logs 
 - **Blob container**, select **Upload**, upload a favorite file, image or related media:
 
 <img src="media/azure.blob.container.upload.png"> 
 
--  **EventGridTriggerFunction**, observe for each image, Event Grid will trigger the Fuction, **Logs** will reflect the Event Grid trigger content: 
+-  **EventGridTrigger1**, observe for each image, Event Grid will trigger the Fuction, **Logs** will reflect the Event Grid trigger content: 
 
 <img src="media/function.app.eventgrid.trigger.png"> 
 
