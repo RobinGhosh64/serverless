@@ -98,7 +98,7 @@ az cosmosdb create --name $COSMOSDB_ACCOUNT_NAME --resource-group $RESOURCE_GROU
 Navigate to the Resource Group created previously, select Create Resource 
 
 
-<img src="media/devday-select-functionapp-create.png">
+<img src="media/devday-select-funcapp-create.png">
 
 Then select on Create Function App
 
