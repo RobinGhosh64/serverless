@@ -213,14 +213,14 @@ Navigate to the Resource Group created previously, select the **devdaymystorage*
 Current status is the following have been created and ready for testing: 
 
 - Azure Blob storage account 
-- Event Grid Topic for stoage account changes  
+- Event Grid Topic created by Azure
 - Function App to receive and log events 
 
 Next step is to create an blob container, upload files and verify the Event Grid System Topic triggers the Function App 
 
 - Navigate to the Resource Group, select the storage account crated for the **Event Grid**
 - Select: **Containers**, **+ Add Container**
-- Name: **container1**, 
+- Name: **test**, 
 - Access level: **default** or **as desired** 
 - Create 
 
@@ -229,7 +229,7 @@ Open a second browser session in the Azure Portal:
 - Session 2: Navigate to the Function App, **EventGridTrigger1**, and open the **Logs** menu, to view the Function logs 
 - **Blob container**, select **Upload**, upload a favorite file, image or related media:
 
-<img src="media/azure.blob.container.upload.png"> 
+<img src="media/upload-blob-test.png"> 
 
 -  **EventGridTrigger1**, observe for each image, Event Grid will trigger the Fuction, **Logs** will reflect the Event Grid trigger content: 
 
