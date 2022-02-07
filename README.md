@@ -172,18 +172,8 @@ Fill all the parameters as shown
 
 ## Step 5: Ask Azure to wire up this Blob Storage Account to emit Events when a new blob is added to this container
 
-In this step, a Storage Account will be created, and then an Event Grid System Topic to the previously created Function App 
-- Create a Storage Account
-- Bind an Event Grid System Topic to a Function App 
+Important steps to follow, please pay attention.
 
-### Step 5.a: Create Storage Account for Event Grid, Azure Fuction and Event Grid
-
-````shell 
-# Create storage account for Event Grid Service 
-az storage account create --name $STORAGE_ACCOUNT_EVENT --location $REGION --resource-group $RESOURCE_GROUP --sku Standard_LRS --tags $TAG_PREFIX 
-````
-
-**NOTE: Switch to the Azure Portal for the remaining steps in the execise as indicated.** 
 
 
 
@@ -197,9 +187,9 @@ az storage account create --name $STORAGE_ACCOUNT_EVENT --location $REGION --res
 <img src="media/sub.eventgrid.registered.png">
 
 ##
-### Step 5.b: Create Event Grid System Topic and Function to process blob storage events 
+### Step 5.b: Ask Azure to create a Event Subscriber(consumer) to trap events , push to EventGrid Topic and then call an Azure Function for post processing 
 
-Navigate to the Resource Group created previously, select the **Our Storage Account**, **Events** <img src="media/rg.events.select.png" > icon and **Create** an **Event Subscription**, link it to the Function App. 
+Navigate to the Resource Group created previously, select the **devdaymystorage**, **Events** <img src="media/rg.events.select.png" > icon and **Create** an **Event Subscription**, link it to the Function App. 
 
 <img src="media/devday-create-azure-event-subscriber.png">
 
