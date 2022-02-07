@@ -154,7 +154,8 @@ az functionapp create --name $FUNCTION_APPNAME  --storage-account $STORAGE_ACCOU
 Navigate to the Resource Group created previously, select Create Resource 
 
 
-<img src="media/devday-select-create-storage-account.png">
+<img src="media/devday-select-storage.png">
+
 
 Then select on Create Storage Account
 
@@ -165,7 +166,7 @@ Fill all the parameters as shown
 - Runtime Stack: **NodeJS** 
 - Create
 
-<img src="media/devday-create-function-app-1.png">
+<img src="media/devday-select-storage.png">
 
 
 ## Step 5: Create Event Grid 
