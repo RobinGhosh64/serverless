@@ -102,8 +102,8 @@ Navigate to the Resource Group created previously, select Create Resource
 
 Then select on Create Function App
 
+Fill all the parameters as shown
 
-Navigate to the Resource Group created previously, select the Function App, and create a new Function App
 - Function App Name: **devday-mfa**
 - Publish: **Code** 
 - Runtime Stack: **NodeJS** 
@@ -136,7 +136,7 @@ Select your Function App, click on Functions, then click on Create a new Functio
 <img src="media/devday-functions-created.png">
 
 
-### Step 5: Create Storage Account and Function App
+### Step 5: Create Storage Account 
 
 Creating a Storage Account and Function App via the [Azure Portal](https://portal.azure.com), or via the [Azure CLI](https://docs.microsoft.com/en-us/azure/azure-functions/scripts/functions-cli-create-serverless).
 
@@ -150,6 +150,23 @@ az functionapp create --name $FUNCTION_APPNAME  --storage-account $STORAGE_ACCOU
 	--consumption-plan-location $REGION \
 	--resource-group $RESOURCE_GROUP --functions-version 2 --tags $TAG_PREFIX
 ````
+
+Navigate to the Resource Group created previously, select Create Resource 
+
+
+<img src="media/devday-select-create-storage-account.png">
+
+Then select on Create Storage Account
+
+Fill all the parameters as shown
+
+- Function App Name: **devday-mfa**
+- Publish: **Code** 
+- Runtime Stack: **NodeJS** 
+- Create
+
+<img src="media/devday-create-function-app-1.png">
+
 
 ## Step 5: Create Event Grid 
 
