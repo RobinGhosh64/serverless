@@ -170,7 +170,7 @@ Fill all the parameters as shown
 <img src="media/devday-select-create-storage-account.png">
 
 
-## Step 5: Ask Azure to wire up this Blob Storage to emit Events when a new blob is added to the container
+## Step 5: Ask Azure to wire up this Blob Storage Account to emit Events when a new blob is added to any container in this storage account
 
 In this step, a Storage Account will be created, and then an Event Grid System Topic to the previously created Function App 
 - Create a Storage Account
@@ -185,20 +185,9 @@ az storage account create --name $STORAGE_ACCOUNT_EVENT --location $REGION --res
 
 **NOTE: Switch to the Azure Portal for the remaining steps in the execise as indicated.** 
 
-### Step 5.b Create a Function to receive Event Grid events 
 
-Navigate to the Resource Group created previously, select the Function App, and create a new Function. 
 
-- Development Environment: **Develop in portal**
-- Template: **Azure Event Grid trigger** 
-- Template details, New Function: **EventGridTriggerFunction** 
-- Create
-
-Navigate within the function app, verify function is **Enabled** 
-
- <img src="media/eventgrid.trigger.function.png">
-
-### Step 5.c: Ensure the Azure subscription has **Registered** the *Microsoft.EventGrid resource provider* 
+### Step 5.a: Ensure the Azure subscription has **Registered** the *Microsoft.EventGrid resource provider* 
 
 - Navigate in the Azure portal to the **Subscription**
 - Select the **Settings->Resource providers**
@@ -208,7 +197,7 @@ Navigate within the function app, verify function is **Enabled**
 <img src="media/sub.eventgrid.registered.png">
 
 ##
-### Step 5.d: Create Event Grid System Topic and Function to process blob storage events 
+### Step 5.b: Create Event Grid System Topic and Function to process blob storage events 
 
 Navigate to the Resource Group created previously, select the **Event Grid Storage Account**, **Events** <img src="media/rg.events.select.png" > icon and **Create** an **Event Subscription**, link it to the Function App. 
 
