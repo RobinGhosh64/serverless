@@ -81,7 +81,14 @@ az cosmosdb create --name $COSMOSDB_ACCOUNT_NAME --resource-group $RESOURCE_GROU
 ````
  
  
-## Step 4: Create Function App  
+## Step 4: Create Function App 
+Navigate to the Resource Group created previously, select the Function App, and create a new Function App
+
+- Function App Name: **devday-mfa**
+- Publish: **Code** 
+- Runtime Stack: **NodeJS** 
+- Create
+
 <img src="media/devday-create-function-app-1.png">
 
 
