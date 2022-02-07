@@ -166,7 +166,7 @@ Fill all the parameters as shown
 - Runtime Stack: **NodeJS** 
 - Create
 
-<img src="media/devday-select-storage.png">
+<img src="media/devday-select-create-storage-account.png">
 
 
 ## Step 5: Create Event Grid 
