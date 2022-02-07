@@ -71,8 +71,7 @@ NOTE: The region location of the Resource Group may be different than the Azure 
 ````shell
 az group create --name $RESOURCE_GROUP --location $REGION --tags $TAG_PREFIX 
 ````
-  ## OR  Create Resource via Azure Portal
-  
+  [Create Azure Resource Group] using Azure Portal
   
   
   Navigate to the Resources from the top main search bar. Select Create New Resource Group
@@ -81,6 +80,7 @@ az group create --name $RESOURCE_GROUP --location $REGION --tags $TAG_PREFIX
 - Resource Name: **devdayfeb-rsg** 
 - Region: **East US** 
 - Create
+
    <img src="media/devday-create-resource.png">
  
 
@@ -95,8 +95,15 @@ az cosmosdb create --name $COSMOSDB_ACCOUNT_NAME --resource-group $RESOURCE_GROU
 
  
 ## Step 4: Create Function App 
-Navigate to the Resource Group created previously, select the Function App, and create a new Function App
+Navigate to the Resource Group created previously, select Create Resource 
 
+
+<img src="media/devday-select-functionapp-create.png">
+
+Then select on Create Function App
+
+
+Navigate to the Resource Group created previously, select the Function App, and create a new Function App
 - Function App Name: **devday-mfa**
 - Publish: **Code** 
 - Runtime Stack: **NodeJS** 
@@ -129,7 +136,7 @@ Select your Function App, click on Functions, then click on Create a new Functio
 <img src="media/devday-functions-created.png">
 
 
-### Step 4A: Create Storage Account and Function App
+### Step 5: Create Storage Account and Function App
 
 Creating a Storage Account and Function App via the [Azure Portal](https://portal.azure.com), or via the [Azure CLI](https://docs.microsoft.com/en-us/azure/azure-functions/scripts/functions-cli-create-serverless).
 
