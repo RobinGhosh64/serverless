@@ -71,6 +71,12 @@ NOTE: The region location of the Resource Group may be different than the Azure 
 ````shell
 az group create --name $RESOURCE_GROUP --location $REGION --tags $TAG_PREFIX 
 ````
+  OR Create Resource 
+  
+   <img src="media/devday-create-resource.png">
+ 
+ Bla Bla
+  <img src="media/devday-create-resources.png">
   
 ## Step 3: Create Cosmos DB resources
 
@@ -79,7 +85,7 @@ Creating a Cosmos DB may be accomplished via the [Azure Portal](https://docs.mic
 ````shell
 az cosmosdb create --name $COSMOSDB_ACCOUNT_NAME --resource-group $RESOURCE_GROUP --tags $TAG_PREFIX 
 ````
- 
+
  
 ## Step 4: Create Function App 
 Navigate to the Resource Group created previously, select the Function App, and create a new Function App
