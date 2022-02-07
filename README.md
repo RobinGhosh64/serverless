@@ -299,16 +299,78 @@ module.exports = async function (context, eventGridEvent) {
 
 The next step is repeat of [Step 6](#step-6-event-grid-blob-storage-test) with an additional verification. Set up browsers as described previously, and upload a desired file into the **container 1**: 
 
-- Verify the **EventGridTriggerFunction** triggers successfully via the **Logs** 
+- Verify the **EventGridTrigger1** triggers successfully via the **Logs** 
 - Navigate to the Cosmos DB **Data Explorer**, select the **EventGridBlobStorageDb**, **Items** document
 - Verify the corresponding event id from the event grid trigger function matches and successive changes to the blob storage trigger updates to items in the Cosmos DB
 
-<img src="media/cosmos.container.event.action.png"> 
+<img src="media/finish-test-2.png"> 
 
 The previous example demonstrates the relationship and services to connect Azure Event Grid to Azure Functions and then persist data in Azure Cosmos DB for an example of an event-driven architecture using **Azure Serverless offerings** 
 
+--------------------------------------
 
-## Step 8: Clean up resources 
+## Step 8: Azure Cosmos DB Input Binding code change
+
+The next step in the application architecture is to read documents representing the Event Grid event from **Cosmos DB** for subsequent downstream processing. Adding Cosmos DB requires two steps: 
+
+- Adding an **Input Binding** to the **HttpTrigger1**
+- Updating the  **HttpTrigger1** function to read all items from the collection in the Cosmos DB 
+- ````shell
+
+module.exports = async function (context, req) {
+    context.log('JavaScript HTTP trigger function processed a request.');
+
+    context.res = {
+        // status: 200, /* Defaults to 200 */
+        body: context.bindings.inputDocument
+    };
+}
+
+````
+
+### Step 8.a: Azure Cosmos DB Output Binding
+
+Navigate to the **EventGridTrigger1**, select **Integration** and **Add output**: 
+- Binding Type: **Azure Cosmos DB**, select **New**, **Cosmos DB account connection**, and link to Cosmos DB account created earlier in the resource group
+- Document parameter name: **outputDocument** (case sensitive and must match the outputDocument property in the function 
+- Database name: **inDatabase** (as desired)
+- Collection name: **MyCollection** (as desired) 
+- If true, ..: **Yes** 
+- Cosmos DB account connection: **select Cosmos DB account created earlier**  
+
+
+<img src="media/create-input-binding.png"> 
+
+## 
+
+### Step 8.b: Update Azure Function to set the output binding with the input data being passed
+
+**EventGridTrigger1\index.js** with **outputDocument** set to emit to Cosmos DB output binding: 
+
+````shell
+
+module.exports = async function (context, eventGridEvent) {
+    context.log(typeof eventGridEvent);
+    context.log(eventGridEvent);
+
+    context.bindings.outputDocument = eventGridEvent.data;
+};
+
+````
+
+### Step 8.c: Azure Cosmos DB Input Binding Test 
+
+The next step is repeat of [Step 6](#step-6-event-grid-blob-storage-test) with an additional verification. Set up browsers as described previously, and upload a desired file into the **container 1**: 
+
+- Verify the **EventGridTrigger1** triggers successfully via the **Logs** 
+- Navigate to the Cosmos DB **Data Explorer**, select the **EventGridBlobStorageDb**, **Items** document
+- Verify the corresponding event id from the event grid trigger function matches and successive changes to the blob storage trigger updates to items in the Cosmos DB
+
+<img src="media/finish-test-2.png"> 
+
+The previous example demonstrates the relationship and services to connect Azure Event Grid to Azure Functions and then persist data in Azure Cosmos DB for an example of an event-driven architecture using **Azure Serverless offerings** 
+
+## Step 9: Clean up resources 
 
 Do NOT forget to remove the resources once you've completed the exercise, [Azure Group Delete](https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az_group_delete)
 
