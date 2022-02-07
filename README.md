@@ -262,40 +262,36 @@ Open a second browser session in the Azure Portal:
 
 The next step in the application architecture is to push a document representing the Event Grid event to **Cosmos DB** for subsequent downstream processing. Adding Cosmos DB requires two steps: 
 
-- Adding an **Output Binding** to the **EventGridTriggerFunction**
-- Updating the  **EventGridTriggerFunction** function to emit the events into Cosmos DB 
+- Adding an **Output Binding** to the **EventGridTrigger1**
+- Updating the  **EventGridTrigger1** function to emit the events into Cosmos DB 
 
 ### Step 7.a: Azure Cosmos DB Output Binding
 
-Navigate to the **EventGridTriggerFunction**, select **Integration** and **Add output**: 
+Navigate to the **EventGridTrigger1**, select **Integration** and **Add output**: 
 - Binding Type: **Azure Cosmos DB**, select **New**, **Cosmos DB account connection**, and link to Cosmos DB account created earlier in the resource group
 - Document parameter name: **outputDocument** (case sensitive and must match the outputDocument property in the function 
-- Database name: **EventGridBlobStorageDb** (as desired)
-- Colleciton name: **Container1** (as desired) 
+- Database name: **inDatabase** (as desired)
+- Collection name: **MyCollection** (as desired) 
 - If true, ..: **Yes** 
 - Cosmos DB account connection: **select Cosmos DB account created earlier**  
 
 
-<img src="media/function.add.output.binding.png"> 
+<img src="media/create-output-binding.png"> 
 
 ## 
 
-### Step 7.b: Update Azure Function to emit document event to CosmosDB binding
+### Step 7.b: Update Azure Function to set the output binding with the input data being passed
 
-**EventGridTriggerFunction\run.csx** with **outputDocument** set to emit to Cosmos DB output binding: 
+**EventGridTrigger1\index.js** with **outputDocument** set to emit to Cosmos DB output binding: 
 
 ````shell
-#r "Microsoft.Azure.EventGrid"
-using Microsoft.Azure.EventGrid.Models;
 
+module.exports = async function (context, eventGridEvent) {
+    context.log(typeof eventGridEvent);
+    context.log(eventGridEvent);
 
-[FunctionName("EventGridTrigger1")]
-public static void Run(EventGridEvent eventGridEvent,  out  object outputDocument, ILogger log)
-{
-    log.LogInformation(eventGridEvent.Data.ToString());
-    outputDocument = eventGridEvent.Data; 
-
-}
+    context.bindings.outputDocument = eventGridEvent.data;
+};
 
 ````
 
