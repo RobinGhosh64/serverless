@@ -234,11 +234,10 @@ Navigate to the Resource Group created previously, select the **devdaymystorage*
 - Event Types Filter: **default 2 selected, or as desired** 
 - Endpoint Type: **Azure Function** 
 - Endpoint: **select endpoint** (navigate and select the desired FunctionApp and select the default **Function Name**  
-- **EventGridTrigger1**, a Function will **automatically** be created to process the **Event Grid** trigger
+
+Then click Create
 
 <img src="media/finish-up-wiring.png"> 
-
-
 
 
 ## Step 6: Event Grid Blob Storage Light Test
