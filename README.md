@@ -92,7 +92,21 @@ Creating a Cosmos DB may be accomplished via the [Azure Portal](https://docs.mic
 ````shell
 az cosmosdb create --name $COSMOSDB_ACCOUNT_NAME --resource-group $RESOURCE_GROUP --tags $TAG_PREFIX 
 ````
+Navigate to the Resource Group created previously, select Create Resource 
 
+
+<img src="media/devday-select-cosmos-db-create.png">
+
+Then select on Create Function App
+
+Fill all the parameters as shown
+
+- Function App Name: **devday-mfa**
+- Publish: **Code** 
+- Runtime Stack: **NodeJS** 
+- Create
+
+<img src="media/devday-create-function-app-1.png">
  
 ## Step 4: Create Function App 
 Navigate to the Resource Group created previously, select Create Resource 
