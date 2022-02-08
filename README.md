@@ -104,7 +104,7 @@ Fill all the parameters as shown
 - Resource Group: **devday-mfa**
 - Account Name: **rghosh-cosmos-sql**
 - Location: **East US** 
-- Capacity Mode: **Provision throughput** 
+- Capacity Mode: **Provisioned throughput** 
 - Other defaults, if necessary
 - 
 - Click on **Create**
