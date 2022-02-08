@@ -97,7 +97,7 @@ Navigate to the Resource Group created previously, select Create Resource
 
 <img src="media/devday-select-cosmos-db-create.png">
 
-Then select on Create Azure Cosmos DB
+Then select on Create Azure Cosmos DB. Cosmos provides different flaovors. Please choose the one with SQL
 
 Fill all the parameters as shown
 
@@ -107,7 +107,7 @@ Fill all the parameters as shown
 - Capacity Mode: **Provision throughput** 
 - Other defaults, if necessary
 - 
-- Clickk on **Create**
+- Click on **Create**
 
 <img src="media/devday-create-cosmos-db-1.png">
 
@@ -121,7 +121,7 @@ Fill all the parameters as shown
 - Partition Key: **/zipCode ** 
 - Other defaults, if necessary
 - 
-- Click on **Create**
+- Click on **Create** to create our new container.
 - 
 <img src="media/devday-create-cosmos-db-2.png">
  
