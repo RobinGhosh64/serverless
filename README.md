@@ -49,7 +49,7 @@ NOTE: The region location of the Resource Group may be different than the Azure 
   
   Fill all paramters as shown:
   
-- Subscription: **your-subscription**
+- Subscription: **your-subscription-name**
 - Resource Name: **devdayfeb-rsg** 
 - Region: **East US** 
 
