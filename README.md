@@ -186,9 +186,9 @@ Important steps to follow, please pay attention.
 
 <img src="media/sub.eventgrid.registered.png">
 
-### Step 6b: Ask Azure to create a Event Subscriber(consumer) to trap events , push to EventGrid Topic and then call an Azure Function for post processing 
+### Step 6b: Ask Azure to create a Event Subscriber(consumer) to trap events, push to EventGrid Topic and then call our Azure Function for post processing 
 
-Navigate to the Resource Group created previously, select the **devdaymystorage**, **Events** <img src="media/rg.events.select.png" > icon and **Create** an **Event Subscription**, link it to the Azure Function. 
+Navigate to the Resource Group created previously, select the **devdaymystorage** storage account, Click on **Events** <img src="media/rg.events.select.png" > icon and thenk click on **Event Subscription** on top, to create a new consumer. 
 
 <img src="media/devday-create-azure-event-subscriber.png">
 
