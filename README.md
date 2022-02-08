@@ -61,17 +61,13 @@ Click on **Review + create**
   
 ## Step 3: Create Cosmos DB resources
 
-Creating a Cosmos DB may be accomplished via the [Azure Portal](https://docs.microsoft.com/en-us/azure/cosmos-db/create-cosmosdb-resources-portal), or via the [Azure CLI](https://docs.microsoft.com/en-us/azure/cosmos-db/cli-samples).
-
-````shell
-az cosmosdb create --name $COSMOSDB_ACCOUNT_NAME --resource-group $RESOURCE_GROUP --tags $TAG_PREFIX 
-````
-Navigate to the Resource Group created previously, select Create Resource 
+Select your newly created resource group. Then click **Create** Or **Create resources** if this is the first resource your are creating
+a Cosmos DB may be accomplished via the [Azure Portal](https://docs.microsoft.com/en-us/azure/cosmos-db/create-cosmosdb-resources-portal), or via the [Azure CLI]
 
 
 <img src="media/devday-select-cosmos-db-create.png">
 
-Then select on Create Azure Cosmos DB. Cosmos provides different flaovors. Please choose the one with SQL
+Then select on **Create** Azure Cosmos DB. Cosmos provides different flaovors. Please choose the one with SQL
 
 Fill all the parameters as shown
 
@@ -84,7 +80,6 @@ Fill all the parameters as shown
 Click on **Create**
 
 <img src="media/devday-create-cosmos-db-1.png">
-
 
 
 Once created, select the COSMOS DB resource again. Then go and click on **DataExplorer** , then click on **New Container**
