@@ -134,7 +134,7 @@ Click on **Create** and finish
 ## Step 4B: Add Function(Method 2) for your EventGrid
 Select your Function App, click on **Functions**, then click on **Create** a new Function
 
-- Development Ebvironment: **Develop in portal**
+- Development Environment: **Develop in portal**
 - Choose template: 
 - Filter : **grid** 
 - Select **Event Grid Trigger** template
@@ -192,16 +192,17 @@ Navigate to the Resource Group created previously, select the **devdaymystorage*
 
 <img src="media/devday-create-azure-event-subscriber.png">
 
-- Configure and verify the **Topic Type** and **Source Resource** match the **stgevent....** resource created previously 
-- Select:  **Event Subscription** 
-- Name: **devdayfebmystorage** 
+Fill all the parameters as shown:
+
+
+- Name: **eventgrid-consumer**
 - Event Schema: **Event Grid Schema** 
 - System Topic Name: **devday-my-topic**
-- Event Types Filter: **default 2 selected, or as desired** 
-- Endpoint Type: **Azure Function** 
-- Endpoint: **select endpoint** (navigate and select the desired FunctionApp and select the default **Function Name**  
+- Filter to Event Types: default to **2 selected**, or as desired
+- Endpoint Type: **Azure Function** , select from the drop-down list
+- Endpoint: **select endpoint** (Click and navigate to another right window and select the desired FunctionApp and select the default **Function Name**  
 
-Then click **Confirm Selection** for the endpoint and then final **Create** for completion.
+Then click **Confirm Selection** for the endpoint and then click on **Create** for completion.
 
 <img src="media/finish-up-wiring.png"> 
 
@@ -216,14 +217,15 @@ Current status is the following have been created and ready for testing:
 
 Next step is to create an blob container, upload files and verify the Event Grid System Topic triggers the Function App 
 
-- Navigate to the Resource Group, select the storage account crated for the **Event Grid**
+- Navigate to the Resource Group, select our Blob storage account **devdayfebmystorage**
 - Select: **Containers**, **+ Add Container**
 - Name: **test**, 
 - Access level: **default** or **as desired** 
-- Create 
+
+Click on **Review + create** and then confirm final creation
 
 Open a second browser session in the Azure Portal:
-- Session 1: Navigate to the newly created **Blob container1**
+- Session 1: Navigate to the newly created **test** container1
 - Session 2: Navigate to the Function App, **EventGridTrigger1**, and open the **Logs** menu, to view the Function logs 
 - **Blob container**, select **Upload**, upload a favorite file, image or related media:
 
@@ -333,13 +335,9 @@ The next step is repeat of [Step 6](#step-6-event-grid-blob-storage-test) with a
 
 The previous example demonstrates the relationship and services to connect Azure Event Grid to Azure Functions and then persist data in Azure Cosmos DB for an example of an event-driven architecture using **Azure Serverless offerings** 
 
-## Step 10: Clean up resources 
+## Step 10: Clean up resources and finish
 
-Do NOT forget to remove the resources once you've completed the exercise, [Azure Group Delete](https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az_group_delete)
-
-```shell
- az group delete --name $RESOURCE_GROUP --yes
-```
+Select your resource group **devdayfeb-rsg** and delete. Remember to confirm all the resources in it.
 
 ## Bonus Material 
 
