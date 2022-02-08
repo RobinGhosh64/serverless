@@ -54,7 +54,7 @@ NOTE: The region location of the Resource Group may be different than the Azure 
 - Region: **East US** 
 
 
-Click on **Review + create**
+Click on **Review + create** and then confirm final creation
 
  <img src="media/devday-create-resource.png">
  
@@ -77,12 +77,12 @@ Fill all the parameters as shown
 - Capacity Mode: **Provisioned throughput** 
 - Other defaults, if necessary
 
-Click on **Create**
+Click on **Review + create** and then confirm final creation
 
 <img src="media/devday-create-cosmos-db-1.png">
 
 
-Once created, select the COSMOS DB resource again. Then go and click on **DataExplorer** , then click on **New Container**
+Once created, select the COSMOS DB resource again. Then go and click on **DataExplorer** , then click on **New Container**  (DO NOT CHOOSE Items Container)
 
 Fill all the parameters as shown
 
@@ -102,34 +102,46 @@ Navigate to the Resource Group created previously, select Create Resource
 
 <img src="media/devday-select-funcapp-create.png">
 
-Then select on Create Function App
+Then select on **Create** Function App
 
-Fill all the parameters as shown
+Fill all the parameters as shown:
 
 - Function App Name: **devday-mfa**
 - Publish: **Code** 
-- Runtime Stack: **NodeJS** 
-- Create
+- Runtime Stack: **Node.js** 
+- Version:**14 LT**
+
+Click on **Review + create** and then confirm final creation
 
 <img src="media/devday-create-function-app-1.png">
 
 ## Step 4A: Add Function(Method 1) for your HttpTrigger 
-Select your Function App, click on Functions, then Create a new Function
+Once the deployment is complete, select **Go to resource**
+OR
+Select your Function App, click on **Functions**, then Create a new Function
 
-- New FunctionName: **HttpTrigger1**
-- Development Ebvironment: **Develop in portal** 
+- Development Environment: **Develop in portal**
+- Choose template:  
 - Filter : **Http** 
-- Create
+-  Select **Http Trigger** template
+- New Function Name: **HttpTrigger1**
+- Authorization level: **Function**
+
+Click on **Create** and finish
 
 <img src="media/devday-create-af-create-http.png">
 
 ## Step 4B: Add Function(Method 2) for your EventGrid
-Select your Function App, click on Functions, then click on Create a new Function
+Select your Function App, click on **Functions**, then click on **Create** a new Function
 
-- New FunctionName: **EventGridTrigger1**
-- Development Ebvironment: **Develop in portal** 
+- Development Ebvironment: **Develop in portal**
+- Choose template: 
 - Filter : **grid** 
-- Create
+- Select **Event Grid Trigger** template
+- New FunctionName: **EventGridTrigger1**
+- Authorization level: **Function**
+
+Click on **Create** and finish
 
 <img src="media/devday-create-af-create-event.png">
 
