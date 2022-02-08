@@ -201,7 +201,7 @@ Navigate to the Resource Group created previously, select the **devdaymystorage*
 - Endpoint Type: **Azure Function** 
 - Endpoint: **select endpoint** (navigate and select the desired FunctionApp and select the default **Function Name**  
 
-Then click Create
+Then click **Confirm Selection** for the endpoint and then final **Create** for completion.
 
 <img src="media/finish-up-wiring.png"> 
 
