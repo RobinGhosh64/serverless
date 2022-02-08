@@ -8,10 +8,12 @@
 - [Step 2: Create an Azure Resource Group ](#step-2-create-an-azure-resource-group)
 - [Step 3: Create Cosmos DB resources](#step-3-create-cosmos-db-resources)
 - [Step 4: Create Function App](#step-4-create-function-app)
-- [Step 5: Create Event Grid](#step-5-create-event-grid)
-- [Step 6: Event Grid Blob Storage Test](#step-6-event-grid-blob-storage-test)
-- [Step 7: Azure Cosmos DB Output Binding](#step-7-azure-cosmos-db-output-binding)
-- [Step 9: Clean up resources](#step-9-clean-up-resources)
+- [Step 5: Create Storage Account](#step-5-create-storage-account)
+- [Step 6: Ask Azure to wireup events from Blob Storage using Event Grid Topic and call AZ function](#step-6-create-event-grid)
+- [Step 7: Event Grid Blob Storage Test](#step-7-event-grid-blob-storage-test)
+- [Step 8: Azure Cosmos DB Output Binding](#step-8-azure-cosmos-db-output-binding)
+- [Step 9: Azure Cosmos DB Input Binding](#step-9-azure-cosmos-db-input-binding)
+- [Step 10: Clean up resources](#step-10-clean-up-resources)
 - [Bonus Material](#bonus-material)
 
 <!-- TOC -->
