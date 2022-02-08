@@ -45,16 +45,19 @@ NOTE: The region location of the Resource Group may be different than the Azure 
 
 ## Step 2: Create an Azure Resource Group 
 
-  Navigate to the **Resources** from the top main search bar. Select Create New Resource Group
-
+  Navigate to the **Resource Groups** from the top main search bar. Select **Create** to create a New Resource Group
+  
+  Fill all paramters as shown:
+  
 - Subscription: **your-subscription**
 - Resource Name: **devdayfeb-rsg** 
 - Region: **East US** 
-- Create
 
-   <img src="media/devday-create-resource.png">
+
+Click on **Review + create**
+
+ <img src="media/devday-create-resource.png">
  
-
   
 ## Step 3: Create Cosmos DB resources
 
