@@ -107,17 +107,21 @@ Fill all the parameters as shown
 - Capacity Mode: **Provision throughput** 
 - Other defaults, if necessary
 - 
-- Create
+- Clickk on **Create**
 
 <img src="media/devday-create-cosmos-db-1.png">
-Then select on Create Cosmos DB
+
+Once created, select the COSMOS DB resource again. Then go and click on **DataExplorer** , then click on **New Container**
 
 Fill all the parameters as shown
 
-- Function App Name: **devday-mfa**
-- Publish: **Code** 
-- Runtime Stack: **NodeJS** 
-- Create
+- Database Id: **myDatabase**
+- D Throughput: **Manual**  with a default of 400 RU
+- Location: **East US** 
+- Capacity Mode: **Provision throughput** 
+- Other defaults, if necessary
+- 
+- Clickk on **Create**
 <img src="media/devday-create-cosmos-db-2.png">
  
 ## Step 4: Create Function App 
