@@ -36,47 +36,16 @@ This example assumes the user already has an Azure subscription with contributor
 - Azure CLI, [How to install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 - Git Bash, [Git Download for Windows](https://gitforwindows.org/)
 
-## Step 1: Setup Azure subscription and properties
+## Step 1: Setup Azure subscription and make sure you can  sign in 
 
 Initial login and subscription setup is a required prerequisite
 
-````shell
-export SUBSCRIPTION_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx
-
-az login 
-az account set --subscription $SUBSCRIPTION_ID
-````
-## Set variable properties for substitution, use an [Azure Tag](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json#azure-cli) property for uniqueness.
-
-````shell
-# <business-unit> is well-known or unique attribute to distinquish among organizational resources, perhaps for billing, dev, test prod, locales, etc. 
-export TAG_PREFIX=<business-unit>
-
-export RESOURCE_GROUP=<$TAG_PREFIX-demo-azure-dev-day>
-export REGION=<eastus2>
-
-export COSMOSDB_ACCOUNT_NAME=${TAG_PREFIX}-cosmosdb-$RANDOM
-
-# Azure storage account names must be <= 24 characters
-export STORAGE_ACCOUNT_FUNC=stgfunc${TAG_PREFIX}${RANDOM}
-export STORAGE_ACCOUNT_EVENT=stgevent${TAG_PREFIX}${RANDOM}
-
-export FUNCTION_APPNAME=${TAG_PREFIX}-functionapp-${RANDOM}
-````
 
 NOTE: The region location of the Resource Group may be different than the Azure resources 
 
 ## Step 2: Create an Azure Resource Group 
 
-[Create Azure Resource Group](https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az_group_create) use the following command line:
-
-````shell
-az group create --name $RESOURCE_GROUP --location $REGION --tags $TAG_PREFIX 
-````
-  [Create Azure Resource Group] using Azure Portal
-  
-  
-  Navigate to the Resources from the top main search bar. Select Create New Resource Group
+  Navigate to the **Resources** from the top main search bar. Select Create New Resource Group
 
 - Subscription: **your-subscription**
 - Resource Name: **devdayfeb-rsg** 
