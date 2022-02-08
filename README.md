@@ -97,7 +97,20 @@ Navigate to the Resource Group created previously, select Create Resource
 
 <img src="media/devday-select-cosmos-db-create.png">
 
-Then select on Create Function App
+Then select on Create Azure Cosmos DB
+
+Fill all the parameters as shown
+
+- Resource Group: **devday-mfa**
+- Account Name: **rghosh-cosmos-sql**
+- Location: **East US** 
+- Capacity Mode: **Provision throughput** 
+- Other defaults, if necessary
+- 
+- Create
+
+<img src="media/devday-create-cosmos-db-1.png">
+Then select on Create Cosmos DB
 
 Fill all the parameters as shown
 
@@ -105,8 +118,7 @@ Fill all the parameters as shown
 - Publish: **Code** 
 - Runtime Stack: **NodeJS** 
 - Create
-
-<img src="media/devday-create-function-app-1.png">
+<img src="media/devday-create-cosmos-db-2.png">
  
 ## Step 4: Create Function App 
 Navigate to the Resource Group created previously, select Create Resource 
