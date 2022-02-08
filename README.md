@@ -115,13 +115,14 @@ Once created, select the COSMOS DB resource again. Then go and click on **DataEx
 
 Fill all the parameters as shown
 
-- Database Id: **myDatabase**
+- Database Id: **inDatabase**
 - D Throughput: **Manual**  with a default of 400 RU
-- Location: **East US** 
-- Capacity Mode: **Provision throughput** 
+- Container Id: **MyCollection** 
+- Partition Key: **/zipCode ** 
 - Other defaults, if necessary
 - 
-- Clickk on **Create**
+- Click on **Create**
+- 
 <img src="media/devday-create-cosmos-db-2.png">
  
 ## Step 4: Create Function App 
