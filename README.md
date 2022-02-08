@@ -97,16 +97,33 @@ Navigate to the Resource Group created previously, select Create Resource
 
 <img src="media/devday-select-cosmos-db-create.png">
 
-Then select on Create Function App
+Then select on Create Azure Cosmos DB
 
 Fill all the parameters as shown
 
-- Function App Name: **devday-mfa**
-- Publish: **Code** 
-- Runtime Stack: **NodeJS** 
-- Create
+- Resource Group: **devday-mfa**
+- Account Name: **rghosh-cosmos-sql**
+- Location: **East US** 
+- Capacity Mode: **Provision throughput** 
+- Other defaults, if necessary
+- 
+- Clickk on **Create**
 
-<img src="media/devday-create-function-app-1.png">
+<img src="media/devday-create-cosmos-db-1.png">
+
+Once created, select the COSMOS DB resource again. Then go and click on **DataExplorer** , then click on **New Container**
+
+Fill all the parameters as shown
+
+- Database Id: **inDatabase**
+- D Throughput: **Manual**  with a default of 400 RU
+- Container Id: **MyCollection** 
+- Partition Key: **/zipCode ** 
+- Other defaults, if necessary
+- 
+- Click on **Create**
+- 
+<img src="media/devday-create-cosmos-db-2.png">
  
 ## Step 4: Create Function App 
 Navigate to the Resource Group created previously, select Create Resource 
