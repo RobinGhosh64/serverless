@@ -138,8 +138,7 @@ Select your Function App, click on **Functions**, then click on **Create** a new
 - Choose template: 
 - Filter : **grid** 
 - Select **Event Grid Trigger** template
-- New FunctionName: **EventGridTrigger1**
-- Authorization level: **Function**
+- New Function Name: **EventGridTrigger1**
 
 Click on **Create** and finish
 
@@ -152,18 +151,6 @@ Click on **Create** and finish
 
 ### Step 5: Create Storage Account 
 
-Creating a Storage Account and Function App via the [Azure Portal](https://portal.azure.com), or via the [Azure CLI](https://docs.microsoft.com/en-us/azure/azure-functions/scripts/functions-cli-create-serverless).
-
-````shell 
-# Create storage account and function app service 
-az storage account create --name $STORAGE_ACCOUNT_FUNC --location $REGION --resource-group $RESOURCE_GROUP --sku Standard_LRS --tags $TAG_PREFIX 
-
-### Step 4A: Create Function App service (function app service is a placeholder for the event grid function, created in next steps)
-
-az functionapp create --name $FUNCTION_APPNAME  --storage-account $STORAGE_ACCOUNT_FUNC \
-	--consumption-plan-location $REGION \
-	--resource-group $RESOURCE_GROUP --functions-version 2 --tags $TAG_PREFIX
-````
 
 Navigate to the Resource Group created previously, select Create Resource 
 
@@ -171,15 +158,16 @@ Navigate to the Resource Group created previously, select Create Resource
 <img src="media/devday-select-storage.png">
 
 
-Then select on Create Storage Account
+Then select on **Create** Storage Account
 
-Fill all the parameters as shown
+Fill all the parameters as shown:
 
 - Storage Account Name: **devdayfebmystorage**
 - Region : **East US**
 - Performamcnce: **Standard** 
 - Redundancy: **Geo redundancy** 
-- Create
+
+Click on **Review + create** and then confirm final creation
 
 <img src="media/devday-select-create-storage-account.png">
 
@@ -187,8 +175,6 @@ Fill all the parameters as shown
 ## Step 6: Ask Azure to wire up this Blob Storage Account to emit Events when a new blob is added to this container
 
 Important steps to follow, please pay attention.
-
-
 
 
 ### Step 6a: Ensure the Azure subscription has **Registered** the *Microsoft.EventGrid resource provider* 
