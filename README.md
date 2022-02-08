@@ -106,10 +106,12 @@ Fill all the parameters as shown
 - Location: **East US** 
 - Capacity Mode: **Provisioned throughput** 
 - Other defaults, if necessary
-- 
-- Click on **Create**
+
+Click on **Create**
 
 <img src="media/devday-create-cosmos-db-1.png">
+
+
 
 Once created, select the COSMOS DB resource again. Then go and click on **DataExplorer** , then click on **New Container**
 
@@ -120,9 +122,9 @@ Fill all the parameters as shown
 - Container Id: **MyCollection** 
 - Partition Key: **/zipCode ** 
 - Other defaults, if necessary
-- 
-- Click on **Create** to create our new container.
-- 
+
+Click on **Create** to create our new container.
+ 
 <img src="media/devday-create-cosmos-db-2.png">
  
 ## Step 4: Create Function App 
