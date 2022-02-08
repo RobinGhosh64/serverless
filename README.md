@@ -11,7 +11,7 @@
 - [Step 5: Create Event Grid](#step-5-create-event-grid)
 - [Step 6: Event Grid Blob Storage Test](#step-6-event-grid-blob-storage-test)
 - [Step 7: Azure Cosmos DB Output Binding](#step-7-azure-cosmos-db-output-binding)
-- [Step 8: Clean up resources](#step-8-clean-up-resources)
+- [Step 9: Clean up resources](#step-9-clean-up-resources)
 - [Bonus Material](#bonus-material)
 
 <!-- TOC -->
